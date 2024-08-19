@@ -1,0 +1,136 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+*:hover {
+  transition: .25s all;
+}
+
+::selection { background: rgba(32, 43, 51, 0.63); color: #fff; }
+
+body {
+  position: relative;
+  background: #aaa;
+}
+
+header, section, footer {
+  width: min(100%,1000px);
+  margin: auto;
+  background: rgba(255,255,255, .1);
+  backdrop-filter: blur(10px);
+}
+
+@media (max-width: 1023px) {
+  header, footer {
+    background: #111!important;
+  }
+}
+
+@media (min-width: 1024px) {
+  header {
+    background: transparent;
+  }
+}
+
+
+header .logout-span {
+  color: #ddd;
+  text-decoration: none;
+}
+header .logout-span:hover {
+  color: #eee;
+}
+
+@media (max-width: 1023px) {
+  header .logout-span {
+    color: #999;
+  }
+  header .logout-span:hover {
+    color: #eee;
+  }
+}
+
+
+input.form-control:focus, textarea.form-control:focus {
+  border-color: transparent;
+  box-shadow: 0 0 0 .25rem rgba(248,249,250,.3);
+}
+
+button {
+  border: 0;
+}
+
+.btn-gradient {
+  background: var(--bs-gradient);
+  color: var(--bs-light)!important;
+}
+
+.btn-gradient:focus {
+  box-shadow: 0 0 0 .25rem rgba(248,249,250,.5);
+}
+
+
+.body-overlay-img {
+  width: 120%;
+  height: 120%; /* Width and Height > 100% to hide filter:blur() ghost white effect */
+  filter: blur(10px) brightness(0.5);
+}
+
+.title {
+  color: #fff;
+  border-color: #ccc;
+}
+
+.title:after {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 1px;
+  margin-top: 4px;
+  border-top: 3px solid #ccc;
+}
+
+
+.muted {
+  opacity: .2;
+  pointer-events: none;
+  transition-duration: .4s;
+}
+
+.text-faded, .text-faded:hover {
+  color: #aaa;
+  text-decoration: none;
+}
+
+
+/*** Footer ***/
+footer, footer a {
+  color: #fff;
+}
+
+footer a {
+  font-weight: 500;
+}
+
+footer a:hover {
+  color: #eee;
+}
+
+footer a:focus {
+  color: #fff;
+}
+
+@media (max-width: 1023px) {
+  footer, footer a {
+    color: #ddd;
+  }
+  footer a:hover {
+    color: #999;
+  }
+  footer a:focus {
+    color: #fff;
+  }
+}
+
