@@ -7,21 +7,21 @@ All tools are already provided in the main site, but in case you want to take th
 
 > 1. Fetch all tasks:
 >
->    > json_output = "http://localhost/BetterDev_Challenge/01/?token=your_token"
+>    > json_output = "http://main-site/?token=your_token"
 >
 >    
 >
 >
 > 2. Fetch a particular task (NOTE: _\_id_ << Note the underscore):
 >
->    > json_output = "http://localhost/BetterDev_Challenge/01/task?token=your_token&_id=the__id_of_the_note"
+>    > json_output = "http://main-site/task?token=your_token&_id=the__id_of_the_note"
 >
 >    
 >
 >
 > 3. Create a new task (NOTE: Uses post method only):
 >
->    > string_output = "http://localhost/BetterDev_Challenge/01/task?token=your_token"
+>    > string_output = "http://main-site/task?token=your_token"
 >
 >    Then you send your values via your preferred language's POST method of sending values. Example:
 >
@@ -46,7 +46,7 @@ All tools are already provided in the main site, but in case you want to take th
 >
 > 4. Edit a task (NOTE: Uses post method only):
 >
->    > string_output = "http://localhost/BetterDev_Challenge/01/task?token=your_token"
+>    > string_output = "http://main-site/task?token=your_token"
 >
 >    Then you send your values via your preferred language's POST method of sending values. Example:
 >
@@ -79,28 +79,28 @@ All tools are already provided in the main site, but in case you want to take th
 >
 > 5. Mark a task done (if you are through with a task but don't want to delete it yet, just markdone for self-indication):
 >
->    > string_output = "http://localhost/BetterDev_Challenge/01/task?token=your_token&action=markdone&__id=the__id_of_the_note"
+>    > string_output = "http://main-site/task?token=your_token&action=markdone&__id=the__id_of_the_note"
 >
 >    
 >
 >
 > 6. Mark a task undone (reverse of above):
 >
->    > string_output = "http://localhost/BetterDev_Challenge/01/task?token=your_token&action=markundone&__id=the__id_of_the_note"
+>    > string_output = "http://main-site/task?token=your_token&action=markundone&__id=the__id_of_the_note"
 >
 >    
 >
 >
 > 7. Delete a task:
 >
->    > string_output = "http://localhost/BetterDev_Challenge/01/task?token=your_token&action=delete&__id=the__id_of_the_note"
+>    > string_output = "http://main-site/task?token=your_token&action=delete&__id=the__id_of_the_note"
 >
 >    
 >
 >
 > 8. Delete all tasks:
 >
->    > string_output = "http://localhost/BetterDev_Challenge/01/task?token=your_token&action=delete_all&confirm=true"
+>    > string_output = "http://main-site/task?token=your_token&action=delete_all&confirm=true"
 
 
 
@@ -118,5 +118,4 @@ In case you lose your token, you can get it again when you login on the main sit
 **TIP**: Feel free to use **_AJAX, IFRAME, cURL (highly recommended), or any other API procedure you know_**, as long as you keep your token private.
 
 
-**NOTE: Everything on this page is for developer mode only. It's a way you can use the Task List by RSTLabs service without even visiting the website. Pay no attention to the content if not a developer, as everything you may need is all provided in the website for absolutely free, for absolutely everyone.**
-
+**NOTE: Everything on this page are for developers only. It's a way you can use the Task List by RSTLabs service without even visiting the website. Pay no attention to the content if not a developer, as everything you may need is all provided in the website for absolutely free, for absolutely everyone.**
