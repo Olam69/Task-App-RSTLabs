@@ -1,12 +1,13 @@
 <?php
 
   if (!isset($crud_permit) || $crud_permit !== true) {
-    header("location: login");
-    exit();
+    exit(header("location: login"));
   }
 
 
   function query_by_id($token, $_id) {
+    $token = mysqli_real_escape_string($GLOBALS['db'], htmlspecialchars(trim($token])));
+    $id = mysqli_real_escape_string($GLOBALS['db'], htmlspecialchars(trim($_id])));
     $q = "SELECT task_title, task_body FROM $token WHERE _id='$_id'";
     $results = mysqli_query($GLOBALS['db'],$q);
     if (mysqli_num_rows($results) < 1) {
@@ -48,7 +49,7 @@
 
   if (isset($_POST['edit'])) {
 
-    if (!isset($_POST['_id']) || empty($_POST['_id']) || $_POST['_id'] == " ") {
+    if (!isset($_POST['_id']) || empty(trim($_POST['_id']))) {
       exit_with($coming_from_page, "ERR!\\nExit Code: _id cannot be left empty.\\nTip: Edit and Create only accept values via POST method, _id is one them.\\n\\nPlease refer to manual.'");
     }
 
@@ -110,7 +111,7 @@
     $arr = [$task_title, $task_body];
 
     foreach ($arr as $str) {
-      if (empty($str) || $str == " ") $empty_variable = true;
+      if (empty(trim($str))) $empty_variable = true;
     }
 
     if ($empty_variable) exit_with($coming_from_page, "ERR!\\nExit Code: task_title and task_body cannot be empty\\nTip: Edit and Create only accept POST values.\\n\\nPlease refer to manual.");
