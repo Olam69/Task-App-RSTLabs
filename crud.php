@@ -6,8 +6,8 @@
 
 
   function query_by_id($token, $_id) {
-    $token = mysqli_real_escape_string($GLOBALS['db'], htmlspecialchars(trim($token])));
-    $id = mysqli_real_escape_string($GLOBALS['db'], htmlspecialchars(trim($_id])));
+    $token = mysqli_real_escape_string($GLOBALS['db'], htmlspecialchars(trim($token)));
+    $id = mysqli_real_escape_string($GLOBALS['db'], htmlspecialchars(trim($_id)));
     $q = "SELECT task_title, task_body FROM $token WHERE _id='$_id'";
     $results = mysqli_query($GLOBALS['db'],$q);
     if (mysqli_num_rows($results) < 1) {
